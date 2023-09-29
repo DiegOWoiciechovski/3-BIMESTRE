@@ -334,3 +334,71 @@ body {
   color:white;
   font-family: cursive;
 }
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce</title>
+  <script src="app.js"></script>
+</head>
+<body>
+  <h1>E-commerce</h1>
+
+  <h2>Produtos</h2>
+  <div id="produtos">
+    <!-- Aqui serão exibidos os produtos -->
+  </div>
+
+  <h2>Carrinho de Compras</h2>
+  <div id="carrinho">
+    <p>Carrinho vazio</p>
+  </div>
+
+  <button onclick="adicionarAoCarrinho(1)">Adicionar Produto 1</button>
+  <button onclick="adicionarAoCarrinho(2)">Adicionar Produto 2</button>
+  <!-- Adicione mais botões com diferentes produtos se desejar -->
+</body>
+</html>
+
+JavaScript
+
+function Produto(nome, preco) {
+  this.nome = nome;
+  this.preco = preco;
+}
+
+var produtos = [
+  new Produto("Produto 1", 10.00),
+  new Produto("Produto 2", 15.00),
+  // Adicione mais produtos aqui
+];
+
+var carrinho = [];
+
+function adicionarAoCarrinho(produtoIndex) {
+  var produto = produtos[produtoIndex-1];
+  carrinho.push(produto);
+
+  atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+  var carrinhoElement = document.getElementById("carrinho");
+  carrinhoElement.innerHTML = ""; // Limpa o carrinho
+
+  if (carrinho.length === 0) {
+    carrinhoElement.innerHTML = "<p>Carrinho vazio</p>";
+  } else {
+    var total = 0;
+
+    for (var i = 0; i < carrinho.length; i++) {
+      var item = carrinho[i];
+      total += item.preco;
+
+      carrinhoElement.innerHTML += "<p>" + item.nome + " - R$" + item.preco.toFixed(2) + "</p>";
+    }
+
+    carrinhoElement.innerHTML += "<p><strong>Total: R$" + total.toFixed(2) + "</strong></p>";
+  }
+}
