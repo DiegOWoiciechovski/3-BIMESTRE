@@ -260,3 +260,77 @@ body {
   bottom: 235px;
   font-family: cursive;
 }
+#grounded{
+  color:white;
+  font-family: cursive;
+}
+#groundedpreco{
+  color:white;
+  font-family: cursive;
+}
+#re7foto{
+  position: absolute;
+  color:white;
+  left: 750px;
+  bottom: 45px;
+}
+#re7{
+  color:white;
+  position: absolute;
+  left: 750px;
+  top: 880px;
+  font-family: cursive;
+}
+#re7preco{
+  color:white;
+  position: absolute;
+  left: 750px;
+  top: 930px;
+  font-family: cursive;
+}
+#godfoto{
+  color:white;
+  position: absolute;
+  left: 1500px;
+  bottom: 355px;
+}
+#god{
+  color:white;
+  position: absolute;
+  left: 1500px;
+  bottom: 285px;
+  font-family: cursive;
+}
+#godpreco{
+  color:white;
+  position: absolute;
+  left: 1500px;
+  bottom: 235px;
+  font-family: cursive;
+}
+#minefoto{
+  position: absolute;
+  color:white;
+  left: 1500px;
+  bottom: 45px;
+}
+#mine{
+  color:white;
+  position: absolute;
+  left: 1500px;
+  top: 880px;
+}
+#minepreco{
+  color:white;
+  position: absolute;
+  left: 1500px;
+  top: 930px;
+}
+#eldenring{
+  color:white;
+  font-family: cursive;
+}
+#eldenringpreco{
+  color:white;
+  font-family: cursive;
+}
